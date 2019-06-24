@@ -47,6 +47,63 @@ namespace BeautyForestAgent
         {
             VisibleChange(true);
         }
+
+        private void 끝내기ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            statusMessage.Text = "종료합니다.";
+            Application.ExitThread();
+        }
+
+        private void 수정ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowModal();
+
+        }
+
+        private void ShowModal()
+        {
+            this.statusMessage.Text = "모달 창을 띄웁니다.";
+            FormModify m = new FormModify();
+            m.Title = "모달 창띄우기";
+            m.ShowDialog();
+        }
+
+        private void 추가ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.statusMessage.Text = "모달 창을 띄웁니다.";
+            FormAdd m = new FormAdd();
+            m.Title = "모달 창띄우기";
+            m.ShowDialog();
+        }
+
+        private void 이프로그램은ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowModaless();
+        }
+
+        private void ShowModaless()
+        {
+            this.statusMessage.Text = "이 프로그램은 (Modaless) 창을 띄웁니다.";
+            FormAbout m = new FormAbout();
+            m.Title = "이 프로그램은 (Modaless) 창을 띄웁니다.";
+            m.Show();
+        }
+
+        private void BtnModify_Click(object sender, EventArgs e)
+        {
+            this.statusMessage.Text = "모달 창을 띄웁니다.";
+            FormModify m = new FormModify();
+            m.Title = "모달 창띄우기";
+            m.ShowDialog();
+        }
+
+        private void BtnAdd_Click(object sender, EventArgs e)
+        {
+            this.statusMessage.Text = "모달 창을 띄웁니다.";
+            FormAdd m = new FormAdd();
+            m.Title = "모달 창띄우기";
+            m.ShowDialog();
+        }
     }
 
 }
